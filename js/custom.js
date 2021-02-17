@@ -31,9 +31,8 @@ $(function () {
     
     // 슬라이드 하는 함수 정의
     function visual_slide(){
+        
         setInterval(function(){
-            // 0부터 슬라이드 갯수만큼 인덱스를 증가시키면서 무한반복 시키는 코드
-            // ex) 슬라이드 갯수가 3장이면 - 0 → 1 → 2 → 0 → 1 → 2... 이렇게 무한반복함
             slide_i = (slide_i + 1) % slide_cnt; 
             $('#visual > .slide').fadeOut(700).eq(slide_i).fadeIn(700);
         }, 3000);
